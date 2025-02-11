@@ -59,6 +59,6 @@ For any inquiries, you can reach out via email:
 
 **Email**: bonkuruprashanth05@gmail.com
 
-You can also find more information on my GitHub profile: [GitHub Profile](https://github.com/bonkuruprashanth)
+You can also find more information on my GitHub profile: [GitHub Profile](https://github.com/Prashanth2Github)
 
 Thank you for visiting the College Website project!
