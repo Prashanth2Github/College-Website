@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vasavi College of Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add styles here or in a separate CSS file */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        header .logo img {
+            height: 80px; /* Increased logo size */
+            margin-right: 20px;
+        }
+        header .college-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        header .institution-info {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #fff;
+        }
+        header .login {
+            font-size: 16px;
+            color: white;
+            text-align: right;
+            margin-left: auto;
+        }
+        header .login a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .content-section {
+            padding: 20px;
+            display: none;
+            margin-top: 20px;
+        }
+        .content-section h2 {
+            margin-bottom: 10px;
+        }
+        .icon-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        .icon-container div {
+            cursor: pointer;
+            font-size: 24px;
+            text-align: center;
+        }
+        .icon-container div:hover {
+            color: #007BFF;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Style for the login form */
+        .login-form {
+            display: none;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .login-form button:hover {
+            background-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Vasavi College of Engineering" style="height: 80px;">
+            <div class="college-info">
+                <span class="college-name" style="font-size: 26px; font-weight: bold; color: #ffffff;">Vasavi College of Engineering</span>
+                <br>
+                <span style="font-size: 16px; color: #cccccc;">(Private Un-aided Non-minority Autonomous Institution)</span>
+                <br>
+                <span style="font-size: 18px; color: #ffd700;">ACCREDITED BY NAAC WITH 'A++' GRADE</span>
+                <br>
+                <span style="font-size: 16px; color: #cccccc;">Affiliated to Osmania University and Approved by AICTE.</span>
+            </div>
+        </div>
+        <div class="login">
+            <a href="javascript:void(0);" onclick="showLoginForm()">Login</a>
+        </div>
+    </header>
+    
+    
+
+    <!-- Main Banner/Slider -->
+    <section class="banner">
+        <div class="slider">
+            <img src="images/slide1.jpg" alt="Banner Image 1">
+            <img src="images/slide3.jpg" alt="Banner Image 3">
+        </div>
+        <div class="slider-prev">&#10094;</div>
+        <div class="slider-next">&#10095;</div>
+    </section>
+
+    <!-- Login Form -->
+    <div id="loginForm" class="login-form">
+        <h2>Login</h2>
+        <form action="login_process.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Icons for Navigation to Sections -->
+    <div class="icon-container">
+        <div onclick="showSection('about')">📚 About</div>
+        <div onclick="showSection('academics')">📖 Academics</div>
+        <div onclick="showSection('admissions')">🎓 Admissions</div>
+        <div onclick="showSection('achievements')">🏆 Achievements</div>
+        <div onclick="showSection('contact')">📞 Contact</div>
+    </div>
+
+    <!-- Content Sections -->
+    <section id="about" class="content-section">
+        <h2>About Us</h2>
+        <p>Established in 1981, Vasavi College of Engineering is a premier institution affiliated with Osmania University, accredited with 'A++' by NAAC...</p>
+    </section>
+
+    <section id="academics" class="content-section">
+        <h2>Academics</h2>
+        <h3>Undergraduate Programs (UG)</h3>
+        <ul>
+            <li>Civil Engineering</li>
+            <li>Mechanical Engineering</li>
+            <li>Electronics & Communication Engineering</li>
+            <li>Computer Science Engineering</li>
+            <li>Computer Science Engineering (AI & ML)</li>
+            <li>Electrical & Electronics Engineering</li>
+            <li>Information Technology</li>
+        </ul>
+        <h3>Postgraduate Programs (PG)</h3>
+        <ul>
+            <li>ME (ES & VLSI)</li>
+            <li>ME (CE & SP)</li>
+            <li>ME (ADM)</li>
+            <li>ME (PS & PE)</li>
+            <li>M.Tech (CSE)</li>
+        </ul>
+    </section>
+
+    <section id="admissions" class="content-section">
+        <h2>Admissions</h2>
+        <p><strong>Undergraduate Admissions:</strong></p>
+        <p>Vasavi College of Engineering admits students to various undergraduate programs through the Telangana State Engineering, Agriculture, and Medical Common Entrance Test (TS EAMCET). The selection is based on the merit rank obtained in the entrance exam.</p>
+        <p><strong>Postgraduate Admissions:</strong></p>
+        <p>For postgraduate admissions, candidates must have a valid Graduate Aptitude Test in Engineering (GATE) score or a valid Telangana State PG Engineering Common Entrance Test (TS PGECET) score. The final admission is based on merit and availability of seats in each program.</p>
+        <p><strong>Application Process:</strong></p>
+        <ul>
+            <li>Online registration through the official VCE admissions portal.</li>
+            <li>Submission of required documents, including mark sheets, transfer certificates, and entrance exam scores.</li>
+            <li>Payment of application fees as per the guidelines.</li>
+        </ul>
+    </section>
+
+    <section id="achievements" class="content-section">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Accredited by NAAC with A++ grade.</li>
+            <li>Recognized as "Best New Local Chapter" by SWAYAM-NPTEL (AA rating for July-Dec 2019).</li>
+            <li>Five UG programs and one PG program accredited by NBA (Tier-I, valid till 30-06-2024).</li>
+            <li>UGC granted 2(f) and 12(B) Status.</li>
+            <li>Autonomous status granted by UGC for 6 years, extended for 10 years (2021-2031).</li>
+            <li>Ranked 187 in NIRF 2020 (Engineering category).</li>
+            <li>Ranked 23 in "Top 100 Private Engineering Institutes 2019" by Times of India.</li>
+            <li>Ranked 94 in "Top 100 Private Engineering Colleges 2019" by Outlook.</li>
+            <li>Ranked 34 in "Top 100 Private Engineering Institutes 2019-20" by Education World.</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="content-section">
+        <h2>Contact</h2>
+        <p>Email: vcehyd@gmail.com</p>
+        <p>Phone: +91 123 456 7890</p>
+        <p>Address: Vasavi College of Engineering, 9-5-81, Ibrahimbagh, Hyderabad - 500 031, Telangana, India</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Vasavi College of Engineering. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none');
+            
+            // Show the clicked section
+            const sectionToShow = document.getElementById(sectionId);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+
+        function showLoginForm() {
+            const loginForm = document.getElementById('loginForm');
+            loginForm.style.display = (loginForm.style.display === 'block' ? 'none' : 'block');
+        }
+    </script>
+
+</body>
+</html>
